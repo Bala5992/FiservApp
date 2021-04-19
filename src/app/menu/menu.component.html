@@ -1,0 +1,4 @@
+
+<ul class="menu-ul">
+    <li class="menu-li" *ngFor="let category of categorys" [ngClass]="{'active':selected == category}" (click)="triggerChange(category)">{{category}}</li> 
+</ul>

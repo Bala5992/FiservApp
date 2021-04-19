@@ -1,0 +1,15 @@
+
+<div class="landing-container">
+    <div class="row w-100">
+        <form class="d-flex col-sm">
+            <input class="form-control me-2 border-rad" type="text" (keyup)="searchDocument()" style="left: -6px;position: relative;"
+                    placeholder="Start typing document name..." [(ngModel)]="searchKey" name="search">
+        </form>
+    </div>
+    <div class="row w-100">
+        <div class="widget widget-dyn" *ngFor="let document of fileredDocs">
+            <div class="widget-title chip-{{document.code}}" title="{{document.category}}"><span class="chip">{{document.category}}</span></div>
+            <div class="widget-content" title="{{document.content}}"><span class="chip">{{document.content}}</span></div>
+        </div>
+    </div>
+</div>
